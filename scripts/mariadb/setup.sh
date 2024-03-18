@@ -1,6 +1,6 @@
 #!/bin/bash
-git clone https://github.com/bbompk/cloudcomp-2023-midterm.git
-cd cloudcomp-2023-midterm/scripts/mariadb
+git clone https://github.com/kracker71/cloud-midterm-2023.git
+cd cloud-midterm-2023/scripts/mariadb
 export DB_NAME=wordpress-db
 export DB_USER=wordpress-user
 export DB_PASS=admin
