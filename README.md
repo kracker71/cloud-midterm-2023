@@ -17,8 +17,8 @@ sudo yum -y install terraform
 ## Run terraform
 
 ```bash
-git clone https://github.com/bbompk/cloudcomp-2023-midterm.git
-cd cloudcomp-2023-midterm
+git clone https://github.com/kracker71/cloud-midterm-2023.git
+cd cloud-midterm-2023
 cd terraform
 terraform init
 terraform plan
