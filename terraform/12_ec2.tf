@@ -28,7 +28,7 @@ resource "aws_instance" "db" {
                 EOF
 
     tags = {
-        Name = "cloud-midterm-db"
+        Name = "cc-midterm-db"
     }
 
 }
@@ -113,7 +113,7 @@ resource "aws_instance" "wp_server" {
                 sudo systemctl restart apache2
                 EOF
     tags = {
-        Name = "cloud-midterm-wp"
+        Name = "cc-midterm-wp"
     }
 }
 
