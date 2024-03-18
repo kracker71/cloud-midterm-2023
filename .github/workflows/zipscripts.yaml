@@ -1,0 +1,31 @@
+name: Auto create scripts.zip
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/zipscripts.yaml'
+      
+jobs:
+    gnerate_scripts_zip:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+        - name: Update tag
+          run: |
+            sudo apt-get update
+            sudo apt-get install zip
+            zip -r scripts.zip scripts
+        - name: Commit and Push changes
+          uses: GuillaumeFalourd/git-commit-push@v1.3
+          with:
+            email: scriptszipper@gmail.com
+            name: Scripts Zipper Bot
+            commit_message: generated scripts.zip
+            target_branch: release
+            remote_repository: https://github.com/bbompk/cloudcomp-2023-midterm
+            access_token: ${{ secrets.ACTIONS_AUTH_TOKEN }}
+            force: 1
